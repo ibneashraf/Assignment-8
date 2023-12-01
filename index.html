@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Assignment 8</title>
+</head>
+<body>
+    <script>
+//-------------------------------------Task 1
+        // Function to check the type of character
+function checkCharacterType(char) {
+  var charCode = char.charCodeAt(0);
+
+  if (charCode >= 48 && charCode <= 57) {
+    return "Number";
+  } else if (charCode >= 65 && charCode <= 90) {
+    return "Uppercase Letter";
+  } else if (charCode >= 97 && charCode <= 122) {
+    return "Lowercase Letter";
+  } else {
+    return "Invalid Input";
+  }
+}
+
+// Example usage
+var userInput = prompt("Enter a character (number or string):");
+var characterType = checkCharacterType(userInput);
+
+// Display the result
+console.log("Input is a " + characterType);
+
+//-------------------------------------Task 2
+// Accept two integers
+var num1 = parseInt(prompt("Enter the first integer:"));
+var num2 = parseInt(prompt("Enter the second integer:"));
+
+// Compare and display the result
+if (num1 > num2) {
+  console.log(num1 + " is larger than " + num2);
+} else if (num1 < num2) {
+  console.log(num2 + " is larger than " + num1);
+} else {
+  console.log("Both integers are equal.");
+}
+
+//-------------------------------------Task 3
+// Take input from the user
+var number = parseFloat(prompt("Enter a number:"));
+
+// Check and display the result
+if (number > 0) {
+  console.log("The number is positive.");
+} else if (number < 0) {
+  console.log("The number is negative.");
+} else {
+  console.log("The number is zero.");
+}
+
+//-------------------------------------Task 4
+// Take a character as input
+var char = prompt("Enter a character:");
+
+// Check if it is a vowel
+var isVowel = /[aeiouAEIOU]/.test(char);
+
+// Display the result
+if (isVowel) {
+  console.log("The character is a vowel.");
+} else {
+  console.log("The character is not a vowel.");
+}
+
+//-------------------------------------Task 5
+// Store correct password in a variable
+var correctPassword = "Secret123";
+
+// Ask user to enter the password
+var enteredPassword = prompt("Enter your password:");
+
+// Validate the passwords
+if (enteredPassword === null || enteredPassword === "") {
+  console.log("Please enter your password.");
+} else if (enteredPassword === correctPassword) {
+  console.log("Correct! Mubarak ho apko");
+} else {
+  console.log("Incorrect password.");
+}
+
+
+
+
+    </script>
+</body>
+</html>
